@@ -1,0 +1,29 @@
+/* ============================================================
+   Responsive & polish — HaizhuProxy
+   ============================================================ */
+
+[data-dash-grid], [data-redeem-grid], [data-invite-grid], [data-profile-grid], [data-admin-grid], [data-tg-grid] {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+[data-node-form], [data-gen-form], [data-tg-form] { grid-template-columns: 1fr !important; }
+
+@media (min-width: 980px) {
+  [data-dash-grid], [data-admin-grid] { grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr) !important; }
+  [data-redeem-grid], [data-invite-grid], [data-profile-grid], [data-tg-grid] { grid-template-columns: minmax(0, 1.4fr) minmax(300px, 1fr) !important; }
+  [data-node-form], [data-gen-form], [data-tg-form] { grid-template-columns: 1fr 1fr !important; }
+  [data-gen-form] { grid-template-columns: 1fr 1fr 1fr !important; }
+}
+
+/* sticky nav behavior */
+.site-shell > header { position: sticky; top: 0; }
+
+/* smooth card lift already in .panel-hover */
+
+/* console topbar for mobile */
+.console-topbar { display: none; }
+
+@media (max-width: 760px) {
+  .display-xl { letter-spacing: -0.02em; }
+  .tbl th, .tbl td { padding: 8px 10px; }
+  .hero-section { padding-top: 48px; }
+}

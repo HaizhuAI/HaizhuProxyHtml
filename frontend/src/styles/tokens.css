@@ -1,0 +1,104 @@
+/* ============================================================
+   HaizhuProxy Design Tokens — Primitive → Semantic → Component
+   Dark precision-instrument system. One accent family only.
+   ============================================================ */
+
+/* ---- Primitive ---- */
+:root {
+  --hz-black-950: #05070a;
+  --hz-black-900: #090c12;
+  --hz-black-850: #0c1017;
+  --hz-black-800: #10151e;
+  --hz-black-700: #161d29;
+  --hz-black-600: #1e2734;
+
+  --hz-line-900: #111826;
+  --hz-line-800: #182131;
+  --hz-line-700: #223046;
+
+  --hz-teal-300: #7ef0d4;
+  --hz-teal-400: #3fd9b4;
+  --hz-teal-500: #17c39a;
+  --hz-teal-600: #0e9d7c;
+  --hz-teal-700: #0a7059;
+
+  --hz-amber-400: #ffc96b;
+  --hz-red-400: #ff6b6b;
+  --hz-blue-400: #6aa8ff;
+
+  --hz-text-hi: #eef3f8;
+  --hz-text-mid: #9fb0c3;
+  --hz-text-low: #5c6b7e;
+  --hz-text-faint: #3a4658;
+
+  --hz-space-1: 4px;  --hz-space-2: 8px;  --hz-space-3: 12px;
+  --hz-space-4: 16px; --hz-space-5: 24px; --hz-space-6: 32px;
+  --hz-space-7: 48px; --hz-space-8: 64px; --hz-space-9: 96px; --hz-space-10: 128px;
+
+  --hz-radius-sm: 6px;
+  --hz-radius-md: 10px;
+  --hz-radius-lg: 16px;
+  --hz-radius-xl: 24px;
+
+  --hz-font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --hz-font-display: 'Space Grotesk Variable', 'Inter Variable', system-ui, sans-serif;
+  --hz-font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Consolas, monospace;
+
+  --hz-shadow-1: 0 1px 2px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.25);
+  --hz-shadow-2: 0 2px 4px rgba(0,0,0,.5), 0 12px 40px rgba(0,0,0,.4);
+  --hz-glow-teal: 0 0 0 1px rgba(63,217,180,.25), 0 0 24px rgba(23,195,154,.14);
+
+  --hz-ease-out: cubic-bezier(.22,.61,.36,1);
+  --hz-ease-spring: cubic-bezier(.34,1.56,.64,1);
+  --hz-dur-fast: 140ms;
+  --hz-dur-med: 260ms;
+  --hz-dur-slow: 520ms;
+}
+
+/* ---- Semantic ---- */
+:root {
+  --bg-base: var(--hz-black-950);
+  --bg-panel: var(--hz-black-900);
+  --bg-panel-2: var(--hz-black-850);
+  --bg-elevated: var(--hz-black-800);
+  --bg-hover: var(--hz-black-700);
+
+  --line-subtle: var(--hz-line-900);
+  --line-soft: var(--hz-line-800);
+  --line-strong: var(--hz-line-700);
+
+  --fg-hi: var(--hz-text-hi);
+  --fg-mid: var(--hz-text-mid);
+  --fg-low: var(--hz-text-low);
+  --fg-faint: var(--hz-text-faint);
+
+  --accent: var(--hz-teal-400);
+  --accent-bright: var(--hz-teal-300);
+  --accent-dim: var(--hz-teal-600);
+  --accent-deep: var(--hz-teal-700);
+  --accent-on: #04140f;
+
+  --warn: var(--hz-amber-400);
+  --danger: var(--hz-red-400);
+  --info: var(--hz-blue-400);
+
+  --ok: var(--hz-teal-400);
+
+  --radius-card: var(--hz-radius-lg);
+  --radius-control: var(--hz-radius-md);
+  --radius-chip: 999px;
+
+  --font-body: var(--hz-font-sans);
+  --font-display: var(--hz-font-display);
+  --font-mono: var(--hz-font-mono);
+
+  --shadow-card: var(--hz-shadow-1);
+  --shadow-pop: var(--hz-shadow-2);
+  --shadow-glow: var(--hz-glow-teal);
+
+  --ease: var(--hz-ease-out);
+  --ease-spring: var(--hz-ease-spring);
+  --dur-fast: var(--hz-dur-fast);
+  --dur-med: var(--hz-dur-med);
+  --dur-slow: var(--hz-dur-slow);
+}

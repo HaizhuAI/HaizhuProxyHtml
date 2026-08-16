@@ -1,0 +1,29 @@
+/* App-level overrides on top of the design system */
+
+.site-shell > header + div { position: relative; z-index: 1; }
+
+.console-nav-item:hover { color: var(--fg-hi); background: var(--bg-hover); }
+.console-nav-item.active { color: var(--accent); background: rgba(63,217,180,.08); box-shadow: inset 2px 0 0 var(--accent); }
+
+.site-mobile-menu { display: none; }
+
+.tg-window { }
+
+@media (max-width: 1024px) {
+  .site-links { display: none !important; }
+  .site-burger { display: inline-flex !important; }
+  .site-mobile-menu {
+    display: flex; flex-direction: column; gap: 4;
+    border-top: 1px solid var(--line-subtle);
+    background: var(--bg-panel);
+    padding: 14px 24px 18px;
+  }
+  .site-mobile-menu a { padding: 8px 0; font-size: 14.5; }
+}
+
+@media (max-width: 860px) {
+  .console-side { display: none; }
+  .console-topbar { display: flex !important; }
+  main { padding: 18px !important; }
+  .site-login { display: none !important; }
+}

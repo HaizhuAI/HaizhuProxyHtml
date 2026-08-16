@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: haizhu-backend
+    environment:
+      HZ_DATABASE_URL: sqlite:////srv/data/haizhu.db
+      HZ_SECRET_KEY: ${HZ_SECRET_KEY:-change-me-in-production}
+    volumes:
+      - haizhu-data:/srv/data
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_DEMO: "0"
+    container_name: haizhu-frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "80:80"
+
+volumes:
+  haizhu-data:
